@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: npm 
 spec:
-  replicas: 5
+  replicas: 10
   selector:
     matchLabels:
       app: npm
@@ -19,11 +19,11 @@ spec:
         name: app
         resources:
           requests:
-            cpu: "20m"
+            cpu: "40m"
             memory: "20Mi"
           limits:
             cpu: "50m"
-            memory: "512Mi"
+            memory: "256Mi"
 ---
 apiVersion: v1
 kind: Service
